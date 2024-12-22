@@ -1,0 +1,304 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header Section */
+header {
+    position: relative;
+    padding-top: 10px; /* Adjust if needed */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+header .logo {
+    max-width: 100px;
+    display: block;
+}
+
+.tagline {
+    flex: 1;
+    text-align: center;
+    margin-top: 30px; /* Ensure no additional space above tagline */
+}
+
+.tagline h1 {
+    font-size: 1.5em; /* Smaller tagline font */
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    list-style-type: none;
+    padding: 15px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: rgb(36, 66, 235);
+    text-align: center;
+    padding: 80px 20px;
+    height: 78vh; /* Make it take up the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+}
+
+/* Hero Slideshow */
+.hero-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep the slideshow behind the text */
+    display: flex;
+    animation: slideAnimation 15s infinite; /* Animation to cycle through images */
+}
+
+
+/* Animation for the slideshow */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Each slide will take up 100% width of the container */
+.hero-slideshow .slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* Make sure the images inside the slideshow cover the area */
+.hero-slideshow .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the whole container */
+}
+
+/* Optional: Add some text styling */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Optional: Styling for the description text */
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+/* Call to Action Button */
+.hero .cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+/* Service Section */
+.services, .promotions, .packages {
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly; /* This ensures even spacing between the cards */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card, .promo-card, .package-card {
+    background-color: #fff;
+    width: calc(33.333% - 20px); /* Adjusted width to ensure proper alignment */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img, .promo-card img, .package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card:hover, .promo-card:hover, .package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action */
+.cta {
+    background-color: #ff7f50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.cta h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color:black;
+}
+
+.cta p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta .cta-button {
+    background-color: #ff951c;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.cta .cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Branches Section */
+.branches {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.branch {
+    margin-bottom: 20px;
+}
+
+.branch h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.branch p {
+    font-size: 1.2em;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+    }
+
+    .card, .promo-card, .package-card {
+        width: 100%; /* Make each card take up full width */
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta h2 {
+        font-size: 1.5em;
+    }
+
+    .cta p {
+        font-size: 1.2em;
+    }
+}
