@@ -1,0 +1,33 @@
+body {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 10px;
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    width: 150px; /* Fixed width for alignment */
+    text-align: right;
+    margin-right: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
