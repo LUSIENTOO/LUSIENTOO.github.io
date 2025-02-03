@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f4f6f9; /* Soft Background Color */
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light Shadow for Navbar */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2C3E50, #34495E);  /* Gradient Background */
+    color: white;
+    text-align: center;
+    padding: 120px 0; /* Adjusted padding for better visibility */
+    margin-top: 60px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Enlarged About Me container */
+#about .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for About Me content */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Profile Image */
+.about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust About Me Text */
+.about-content p {
+    font-size: 18px;
+    max-width: 600px;
+    text-align: left;
+}
+
+
+/* Key Projects and Assignments */
+#projects {
+    background: #D5DBDB;
+    margin-bottom: 50px; /* Added margin to create spacing */
+    padding-bottom: 50px; /* Extra padding for better spacing */
+}
+
+#assignments {
+    background: #AEB6BF;
+    margin-bottom: 50px; /* Added margin to create spacing */
+    padding-bottom: 50px; /* Extra padding for better spacing */
+}
+
+
+/* Grid Layout */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+#projects .card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Awards Section */
+#awards {
+    background: #CCD1D1;
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.award-img img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    animation: bounce 1.5s ease infinite;
+}
+
+.certifications a {
+    color: #2C3E50;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.certifications a:hover {
+    color: #34495E;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+    background: #34495E;
+    color: white;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Contact Form */
+form {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s ease-out;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #575757;
+    transform: scale(1.05); /* Button Hover Effect */
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}

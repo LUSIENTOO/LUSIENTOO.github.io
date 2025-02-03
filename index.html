@@ -3,19 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
-    <link rel="icon" type="image/x-icon" href="jed.jpg">
+    <title>Digital Course Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hi! I am Jeddh Andrew Jayme</h1>
-    <h2>HTML Tasks</h2>
-    <ol>
-        <li>
-            <a href="JaymeExplorePHTours.html" target="_blank">Explore PH Tours</a>
-        </li>
-        <li>
-            <a href="JaymeCourseSchedule.html" target="_blank">Jayme Course Schedule</a>
-        </li>
-    </ol>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to My Digital Portfolio</h2>
+            <p>Showcasing my skills in HTML, CSS, and JavaScript</p>
+        </div>
+    </section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="images/profile.png" alt="My Profile Picture">
+            <p>Hello! I'm Jeddh Andrew Jayme, a student passionate about web development. 
+            This portfolio showcases my achievements and progress in HTML, CSS, and JavaScript.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Key Projects</h2>
+            <div class="grid">
+                <!-- Project 1: Mapua ParentLink -->
+                <div class="card">
+                    <img src="images/parentlink.png" alt="Mapua ParentLink">
+                    <h3>Mapua ParentLink</h3>
+                    <p>A web-based solution that automates the assignment of the parent observer role in Blackboard Ultra using API services.</p>
+                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Python (Flask)</p>
+                    <p><strong>Objective:</strong> Improve transparency and facilitate parental access to student grades and course progress.</p>
+                </div>
+                <!-- Project 2: CafeConnect POS System -->
+                <div class="card">
+                    <img src="images/cafecon.png" alt="CafeConnect POS System">
+                    <h3>CafeConnect POS System</h3>
+                    <p>A Java-based POS system for cafes with a database stored in a text file.</p>
+                    <p><strong>Tech Stack:</strong> Java</p>
+                    <p><strong>Objective:</strong> Efficiently manage cafe transactions with a conceptual framework.</p>
+                </div>
+                <!-- Project 3: EduReserve -->
+                <div class="card">
+                    <img src="images\edureserve.png" alt="EduReserve System">
+                    <h3>EduReserve: School Facility Booking Management System</h3>
+                    <p>A C# system for managing school facility reservations with a SQL database.</p>
+                    <p><strong>Tech Stack:</strong> C#, SQL</p>
+                    <p><strong>Objective:</strong> Streamline the booking process for school facilities, ensuring efficient scheduling and usage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Assignments Section -->
+<section id="assignments">
+    <div class="container">
+        <h2>Assignments</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Student Grade Calculator</h3>
+                <p>Developed a simple program to calculate student grades based on their scores in assignments and exams.</p>
+            </div>
+            <div class="card">
+                <h3>Implement a Priority Queue</h3>
+                <p>Created a program to implement a priority queue, demonstrating the use of data structures.</p>
+            </div>
+            <div class="card">
+                <h3>Simple Blog Website</h3>
+                <p>Built a simple blog website with basic CRUD operations using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="card">
+                <h3>Library Management System</h3>
+                <p>Developed a system to manage books, patrons, and transactions in a library using C++.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <div class="container">
+            <h2>Awards & Certifications</h2>
+            <!-- Award Image -->
+            <div class="award-img">
+                <img src="images/cert 2.png" alt="Award Image">
+            </div>
+            <!-- PDF Certifications -->
+            <div class="certifications">
+                <div class="award-img">
+                    <img src="images/cert 1.png" alt="Award Image">
+                </div>
+                <div class="award-img">
+                    <img src="images/cert 3.png" alt="Award Image">
+                </div>
+                <div class="award-img">
+                    <img src="images/cert 4.png" alt="Award Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Digital Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
