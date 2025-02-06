@@ -1,41 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WeatherAPI Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAPI Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        div {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        strong {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-<h1>WeatherAPI Example</h1>
 
-<button onclick="callAPI()">Fetch Weather Data</button>
+    <h1>WeatherAPI Example</h1>
 
-<div>
-<h2>Weather Details</h2>
-<p><strong>City:</strong> <span id="weather_city">--</span></p>
-<p><strong>Temperature:</strong> <span id="weather_temperature">--</span></p>
-<p><strong>Condition:</strong> <span id="weather_condition">--</span></p>
-</div>
+    <button onclick="callAPI()">Fetch Weather Data</button>
 
-<script>
-// Replace with your WeatherAPI key
-const apiKey = 'cbb0b276f1724b6fb1420151241811';
-// Change this to the city you want to search const city = 'Davao';
+    <div>
+        <h2>Weather Details</h2>
+        <p><strong>City:</strong> <span id="weather_city">--</span></p>
+        <p><strong>Temperature:</strong> <span id="weather_temperature">--</span></p>
+        <p><strong>Condition:</strong> <span id="weather_condition">--</span></p>
+    </div>
 
-function callAPI() { const url =
-`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+    <script>
+        // Replace with your WeatherAPI key
+        const apiKey = 'cbb0b276f1724b6fb1420151241811';
+        // Change this to the city you want to search
+        const city = 'Davao';
 
-fetch(url)
-.then(response => response.json())
-.then(data => {
-console.log(data);
+        function callAPI() {
+            const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
-document.querySelector("#weather_city").textContent = data.location.name || 'N/A';
-document.querySelector("#weather_temperature").textContent =
-`${data.current.temp_c}°C` || 'N/A';
-document.querySelector("#weather_condition").textContent = data.current.condition.text || 'N/A';
-});
-}
-</script>
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                document.querySelector("#weather_city").textContent = data.location.name || 'N/A';
+                document.querySelector("#weather_temperature").textContent =
+                    `${data.current.temp_c}°C` || 'N/A';
+                document.querySelector("#weather_condition").textContent = data.current.condition.text || 'N/A';
+            });
+        }
+    </script>
 </body>
 </html>
+
