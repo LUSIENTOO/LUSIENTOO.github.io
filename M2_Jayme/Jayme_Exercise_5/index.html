@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            transition: background 1s ease-in-out;
+        }
+
+        #quoteDisplay {
+            margin: 20px auto;
+            font-size: 1.5em;
+            color: #333;
+            width: 60%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        #author {
+            font-style: italic;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background: linear-gradient(120deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: linear-gradient(120deg, #0056b3, #004085);
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Quote Generator</h1>
+    <div id="quoteDisplay">
+        <p id="quote">Click the button to get a random quote!</p>
+        <p id="author"></p>
+    </div>
+    <button id="newQuoteBtn">Get New Quote</button>
+
+    <script>
+        const quoteElement = document.getElementById('quote');
+        const authorElement = document.getElementById('author');
+        const button = document.getElementById('newQuoteBtn');
+
+        // Function to change the background color smoothly
+        function changeBackgroundColor() {
+            const colors = ["#89f7fe", "#66a6ff", "#ff9a9e", "#fad0c4", "#fbc2eb", "#a6c1ee"];
+            const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = `linear-gradient(120deg, ${randomColor1}, ${randomColor2})`;
+        }
+
+        // Function to fetch a random quote
+        function fetchQuote() {
+            // Show loading message while fetching
+            quoteElement.textContent = 'Loading quote...';
+            authorElement.textContent = '';
+
+            // Fetch all quotes from the DummyJSON API
+            fetch('https://dummyjson.com/quotes')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Get a random quote from the list of quotes
+                    const randomIndex = Math.floor(Math.random() * data.quotes.length);
+                    const randomQuote = data.quotes[randomIndex];
+
+                    // Display the quote and author with animation
+                    quoteElement.textContent = `"${randomQuote.quote}"`;
+                    authorElement.textContent = `- ${randomQuote.author}`;
+
+                    // Change background color smoothly
+                    changeBackgroundColor();
+
+                    // Apply fade-in animation
+                    document.getElementById("quoteDisplay").style.animation = "none";
+                    setTimeout(() => {
+                        document.getElementById("quoteDisplay").style.animation = "fadeIn 0.8s ease-in-out forwards";
+                    }, 10);
+                })
+                .catch(error => {
+                    // Handle any errors that occur during the fetch
+                    console.error('Error fetching quote:', error);
+                    quoteElement.textContent = 'Failed to load quote. Please try again.';
+                    authorElement.textContent = '';
+                });
+        }
+
+        // Fetch a quote when the button is clicked
+        button.addEventListener('click', fetchQuote);
+
+        // Fetch a quote when the page loads
+        fetchQuote();
+    </script>
+</body>
+</html>
