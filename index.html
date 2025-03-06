@@ -6,10 +6,8 @@
     <title>Digital Course Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="jed.jpg">
-
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <header>
         <div class="container">
@@ -33,113 +31,102 @@
         </div>
     </section>
 
-<!-- About Section -->
-<section id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="images/profile.png" alt="My Profile Picture">
-            <p>Hello! I'm Jeddh Andrew Jayme, a student passionate about web development. 
-            This portfolio showcases my achievements and progress in HTML, CSS, and JavaScript.</p>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <div class="about-content" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="images/profile.png" alt="My Profile Picture" style="margin-bottom: 15px;">
+                <p>Hello! I'm Jeddh Andrew Jayme, a student passionate about web development. This portfolio showcases my achievements and progress in HTML, CSS, and JavaScript.</p>
+                
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+<section id="projects">
+    <div class="container text-center">
+        <h2>Key Projects</h2>
+        <div class="grid"> <!-- Added a grid container -->
+            <div class="card">
+                <a href="mapua link.html" style="text-decoration: none; color: white;">
+                    <img src="images/parentlink.png" alt="CafeConnect POS System">
+                    <h3>Mapua ParentLink</h3>
+                </a>
+                <p>A web-based solution that automates the assignment of the parent observer role in Blackboard Ultra using API services.</p>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Python(Flask)</p>
+            </div>
+            <div class="card">
+                <a href="caf con.html" style="text-decoration: none; color: white;">
+                    <img src="images/cafecon.png" alt="CafeConnect POS System">
+                    <h3>CafeConnect POS System</h3>
+                </a>
+                <p>A Java-based POS system for cafes with a database stored in a text file.</p>
+                <p><strong>Tech Stack:</strong> Java</p>
+            </div>
+            <div class="card">
+                <a href="booking.html" style="text-decoration: none; color: white;">
+                    <img src="images/edureserve.png" alt="EduReserve System">
+                    <h3>EduReserve: School Facility Booking Management System</h3>
+                </a>
+                <p>A C# system for managing school facility reservations with a SQL database.</p>
+                <p><strong>Tech Stack:</strong> C#, SQL</p>
+            </div>
         </div>
     </div>
 </section>
 
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Key Projects</h2>
+    <!-- Assignments Section -->
+    <section id="assignments">
+        <div class="container text-center">
+            <h2>Assignments</h2>
             <div class="grid">
-                <!-- Project 1: Mapua ParentLink -->
                 <div class="card">
-                    <img src="images/parentlink.png" alt="Mapua ParentLink">
-                    <h3>Mapua ParentLink</h3>
-                    <p>A web-based solution that automates the assignment of the parent observer role in Blackboard Ultra using API services.</p>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Python (Flask)</p>
-                    <p><strong>Objective:</strong> Improve transparency and facilitate parental access to student grades and course progress.</p>
+                    <a href="JAYME_JS_ACTIVITY 1-4/JAYME_JS_ACTIVITY 1-4.html" style="text-decoration: none;color:white"><h3>JS Activity 1-4</h3></a>
+                    <p>Javascript Activity</p>
                 </div>
-                <!-- Project 2: CafeConnect POS System -->
                 <div class="card">
-                    <img src="images/cafecon.png" alt="CafeConnect POS System">
-                    <h3>CafeConnect POS System</h3>
-                    <p>A Java-based POS system for cafes with a database stored in a text file.</p>
-                    <p><strong>Tech Stack:</strong> Java</p>
-                    <p><strong>Objective:</strong> Efficiently manage cafe transactions with a conceptual framework.</p>
+                    <a href="M2_Jayme/M2.html" style="text-decoration: none;color:white"><h3>Week 8 Hands-On Activities</h3></a>
+                    <p>Assessments</p>
                 </div>
-                <!-- Project 3: EduReserve -->
                 <div class="card">
-                    <img src="images\edureserve.png" alt="EduReserve System">
-                    <h3>EduReserve: School Facility Booking Management System</h3>
-                    <p>A C# system for managing school facility reservations with a SQL database.</p>
-                    <p><strong>Tech Stack:</strong> C#, SQL</p>
-                    <p><strong>Objective:</strong> Streamline the booking process for school facilities, ensuring efficient scheduling and usage.</p>
+                    <a href="JaymeExplorePHTours.html" style="text-decoration: none;color:white"><h3>Explore PH Tours</h3></a>
+                    <p>Developed a website using HTML and CSS.</p>
+                </div>
+                <div class="card">
+                    <a href="JaymeCourseSchedule.html" style="text-decoration: none;color:white"><h3>My 2nd Term Course Schedule</h3></a>
+                    <p>Developed a website of course schedule using HTML and CSS.</p>
                 </div>
             </div>
         </div>
     </section>
-
-<!-- Assignments Section -->
-<section id="assignments">
-    <div class="container">
-        <h2>Assignments</h2>
-        <div class="grid">
-            <div class="card">
-                <a href="studentcalculator.html" style="text-decoration: none;color:inherit"><h3>student grade calculator</h3></a>
-                <p>Developed a simple program to calculate student grades based on their scores in assignments and exams.</p>
-            </div>
-            <div class="card">
-                <h3>Implement a Priority Queue</h3>
-                <p>Created a program to implement a priority queue, demonstrating the use of data structures.</p>
-            </div>
-            <div class="card">
-                <h3>Simple Blog Website</h3>
-                <p>Built a simple blog website with basic CRUD operations using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="card">
-                <h3>Library Management System</h3>
-                <p>Developed a system to manage books, patrons, and transactions in a library using C++.</p>
-            </div>
-            <div class="card">
-                <a href="JaymeExplorePHTours.html" style="text-decoration: none;color:inherit"><h3>Explore PH Tours</h3></a>
-                <p>Developed a website using html and css.</p>
-            </div>
-            <div class="card">
-                <a href="JaymeCourseSchedule.html" style="text-decoration: none;color:inherit"><h3>My 2nd term course Schedule</h3></a>
-                <p>Developed a website of course schedule using html and css .</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 
     <!-- Awards Section -->
     <section id="awards">
-        <div class="container">
+        <div class="container text-center">
             <h2>Awards & Certifications</h2>
-            <!-- Award Image -->
-            <div class="award-img">
-                <img src="images/cert 2.png" alt="Award Image">
-            </div>
-            <!-- PDF Certifications -->
-            <div class="certifications">
+            <div class="grid">
                 <div class="award-img">
-                    <img src="images/cert 1.png" alt="Award Image">
+                    <img src="images/cert 2.png" alt="Award Image" class="animated-award">
                 </div>
                 <div class="award-img">
-                    <img src="images/cert 3.png" alt="Award Image">
+                    <img src="images/cert 1.png" alt="Award Image" class="animated-award">
                 </div>
                 <div class="award-img">
-                    <img src="images/cert 4.png" alt="Award Image">
+                    <img src="images/cert 3.png" alt="Award Image" class="animated-award">
+                </div>
+                <div class="award-img">
+                    <img src="images/cert 4.png" alt="Award Image" class="animated-award">
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container text-center">
             <p>&copy; 2025 My Digital Portfolio</p>
         </div>
     </footer>

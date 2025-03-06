@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* Animated Background SVG */
+#bg-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container for Content */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Header */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Section */
+h2 {
+    font-size: 1.5rem;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* List Styling */
+ol {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+ol li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* Link Styling with Animation */
+a {
+    text-decoration: none;
+    color: #ff00ff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: #ffff00;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation Delay for List Items */
+ol li:nth-child(1) { animation-delay: 0.3s; }
+ol li:nth-child(2) { animation-delay: 0.6s; }
+ol li:nth-child(3) { animation-delay: 0.9s; }
+ol li:nth-child(4) { animation-delay: 1.2s; }
+ol li:nth-child(5) { animation-delay: 1.5s; }
+ol li:nth-child(6) { animation-delay: 1.8s; }
